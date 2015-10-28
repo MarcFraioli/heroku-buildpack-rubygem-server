@@ -23,7 +23,7 @@ cat > "start.sh" <<EOF
 env
 pwd
 ls -lR gems_home
-gem server -d gems_home -p $PORT --no-daemon
+gem server -d gems_home -p \$PORT --no-daemon
 EOF
 
 chmod 755 start.sh
