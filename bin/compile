@@ -4,6 +4,7 @@
 # Work in the build directory
 cd $1
 
+cat > "start.sh" <<EOF
 # Make a directory to store the gems
 mkdir -p gems_home
 
@@ -18,7 +19,6 @@ find . \
     --install-dir ./gems_home \
     --force ';'
 
-cat > "start.sh" <<EOF
 #!/bin/bash
 env
 pwd
