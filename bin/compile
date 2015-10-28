@@ -18,7 +18,7 @@ find . \
     --install-dir ./gems_home \
     --force ';'
 
-cat > "$BUILD_DIR/start.sh" <<EOF
+cat > "start.sh" <<EOF
 #!/bin/bash
 env
 pwd
