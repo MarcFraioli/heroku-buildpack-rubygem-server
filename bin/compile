@@ -26,4 +26,4 @@ ls -lR gems_home
 gem server -d gems_home -p $PORT --no-daemon
 EOF
 
-chmod 755 "${BUILD_DIR}/start.sh"
+chmod 755 start.sh
