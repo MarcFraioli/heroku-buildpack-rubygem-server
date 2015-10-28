@@ -17,3 +17,13 @@ find . \
     --local --no-ri --no-rdoc --ignore-dependencies \
     --install-dir ./gems_home \
     --force ';'
+
+cat > "${BUILD_DIR}/start.sh"  << EOF
+#!/bin/bash
+env
+pwd
+ls -lR gems_home
+gem server -d gems_home -p $PORT --no-daemon
+EOF
+
+chmod 755 "${BUILD_DIR}/start.sh"
