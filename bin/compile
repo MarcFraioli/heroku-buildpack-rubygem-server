@@ -4,6 +4,8 @@
 # Work in the build directory
 cd $1
 
+echo we are in `pwd`
+
 cat > "start.sh" <<EOF
 # Make a directory to store the gems
 mkdir -p gems_home
@@ -23,6 +25,7 @@ find . \
 env
 pwd
 ls -lR gems_home
+
 gem server -d gems_home -p \$PORT --no-daemon --debug
 EOF
 
