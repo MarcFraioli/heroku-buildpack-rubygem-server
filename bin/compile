@@ -16,13 +16,14 @@ find . \
     -maxdepth 1 \
     -exec gem install '{}' \
     --local --no-ri --no-rdoc --ignore-dependencies \
+    --install-dir gems_home \
     --force ';'
 
 #!/bin/bash
 env
 pwd
 ls -lR gems_home
-gem server -p \$PORT --no-daemon
+gem server -d gems_home -p \$PORT --no-daemon
 EOF
 
 chmod 755 start.sh
