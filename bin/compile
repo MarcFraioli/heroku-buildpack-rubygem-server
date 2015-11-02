@@ -25,7 +25,8 @@ find . \
 env
 pwd
 ls -lR gems_home
-gem --version
+echo "Ruby version `ruby --version`"
+echo "Gem version `gem --version`"
 
 gem server -d gems_home -p \$PORT --no-daemon --debug
 EOF
