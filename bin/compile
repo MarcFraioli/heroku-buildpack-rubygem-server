@@ -25,6 +25,7 @@ find . \
 env
 pwd
 ls -lR gems_home
+gem --version
 
 gem server -d gems_home -p \$PORT --no-daemon --debug
 EOF
